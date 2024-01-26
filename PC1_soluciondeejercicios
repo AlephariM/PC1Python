@@ -1,0 +1,140 @@
+#Pregunta 1
+#Ingrese su nombre
+nombre = input("Ingrese su nombre:")
+#Mostrar en pantalla
+print(f"¡Hola {nombre}!")
+print("¡Hola "+  str(nombre)+"!")
+print("¡Hola {}!".format(nombre))
+#----------------------------------------------------------------------------
+
+#Pregunta 2
+consumo = float(input("Ingrese el monto total consumido en el restaurante (en dolares)"))
+consumo
+
+porcentaje = float(input("Ingrese el porcentaje que dejará de propina"))
+porcentaje
+
+propina = consumo * porcentaje/100
+
+print("La propina que dejará es: {}".format(propina))
+#----------------------------------------------------------------------------
+
+#Pregunta 3
+npayasos = int(input("Ingrese la cantidad de payasos vendidos en el último pedido"))
+
+nmunecas = int(input("Ingrese la cantidad de munecas vendidas en el último pedido"))
+
+peso = 112*npayasos + 75*nmunecas
+
+print(f"El peso total del pedido es de {peso}")
+#----------------------------------------------------------------------------
+
+#Pregunta 4
+entero = int(input("Ingrese un entero positivo"))
+
+suma = (entero * (entero + 1))/2
+
+print("La suma de los enteros es: "+str(suma))
+#----------------------------------------------------------------------------
+
+#Pregunta 5
+nshow = int(input("Ingrese el número de shows musicales a los que ha asistido el 2023"))
+
+if(nshow > 3) :
+    valor = True
+else:
+    valor = False
+valor
+#----------------------------------------------------------------------------
+
+#Pregunta 6
+edad = int(input("Ingrese su edad: "))
+
+if(edad < 4):
+    precioe = 0
+elif (edad >= 4 and edad < 18):
+    precioe = 5
+elif(edad >= 18):
+    precioe = 10
+else:
+    print("edad incorrecta")
+print("El precio de su entrada es de {} dolares".format(precioe))
+#----------------------------------------------------------------------------
+
+#Pregunta 7
+numeroA = float(input("Ingrese primer número: "))
+
+numeroB = float(input("Ingrese segundo número: "))
+
+print("1-Sumar ambos números.\n2-Restar los número.\n3-Multiplicar los números.\n")
+opcion = int(input("Seleccione una opcion:"))
+
+if(opcion == 1):
+    print(f"La suma es: {numeroA + numeroB}")
+elif(opcion == 2):
+    print(f"La resta es: {numeroA - numeroB}")
+elif(opcion == 3):
+    print(f"La multiplicación es: {numeroA * numeroB}")
+else:
+    print("Opción invalida.")
+#----------------------------------------------------------------------------
+#Pregunta 8
+time = input("Ingrese la hora en formato 24:00")
+hours, minutes = time.split(":")
+tiempo_real = float(hours) + float(minutes)/60
+tiempo_real
+
+if(tiempo_real >= 7 and tiempo_real <=8):
+    print("Es hora de desayunar")
+elif(tiempo_real>=12 and tiempo_real<=13):
+    print("Es hora de almorzar")
+elif(tiempo_real>=18 and tiempo_real<=19):
+    print("Es hora de cenar")
+else:
+    print("Espero que tengas un excelente día") 
+#----------------------------------------------------------------------------
+
+#Pregunta 9
+lista_frase = ['Di', 'buen', 'día', 'a', 'papa']
+lista_frase.reverse()
+lista_frase
+#----------------------------------------------------------------------------
+#Pregunta 10
+lista_colores = ['Rojo', 'Verde', 'Blanco', 'Negro', 'Rosa', 'Amarillo']
+lista_colores.remove(lista_colores[5])
+lista_colores.remove(lista_colores[4])
+lista_colores.remove(lista_colores[0])
+lista_colores
+#----------------------------------------------------------------------------
+#Pregunta 11
+lista_repetida = [1, 1, 2, 3, 4, 4, 5, 1]
+lista_sinrepetir = []
+
+for i in lista_repetida:
+    if i not in lista_sinrepetir:
+        lista_sinrepetir.append(i)
+
+print(f"Lista repetida: {lista_repetida}")
+print(f"Lista repetida: {lista_sinrepetir}")
+#----------------------------------------------------------------------------
+#Pregunta 12
+archivo = input("Ingrese el nombre del archivo: ")
+partes = archivo.split(".")
+nombre = partes[0]
+extension = partes[1]
+
+extensiones = {
+    'gif': 'image/gif',
+    'jpg': 'image/jpeg',
+    'jpeg': 'image/jpeg',
+    'png': 'image/png',
+    'pdf': 'application/pdf',
+    'txt': 'text/plain',
+    'zip': 'application/zip'
+}
+
+#Si no se encuentra el diccionario, entonces continua con:
+extensiones = extensiones.get(extension, 'application/octet-stream')
+
+print(f"Tipo extension: {extensiones}")
+extension
